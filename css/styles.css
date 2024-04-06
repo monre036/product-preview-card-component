@@ -22,4 +22,104 @@ ul {
 body {
     margin: 0;
     font-family: sans-serif;
+    background-color: #f2eae2;
+}
+
+.main {
+    margin-inline: auto;
+    padding: 1.75rem 1rem;
+}
+
+.card {
+    width: 343px;
+    border-radius: 0.625rem;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+@media screen and (width >=768px) {
+    .card {
+        width: 600px;
+    }
+
+    .card-image,
+    .card-info {
+        display: inline-block;
+    }
+
+    .card-image {
+        width: 450px;
+    }
+
+    .card-info {
+        width: 263px;
+        height: 450px;
+        margin-inline-start: auto;
+    }
+}
+
+.card-info {
+    padding: 1.5rem;
+    vertical-align: top
+}
+
+.subtitle {
+    font-size: 0.75rem;
+    font-weight: medium;
+    letter-spacing: 5px;
+    color: #6c7289;
+}
+
+.title {
+    font-family: 'Fraunces', serif;
+    color: #1c232b;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.text {
+    font-family: 'Montserrat', sans-serif;
+    color: #6c7289;
+    line-height: 1.4375rem;
+    font-size: 0.875rem;
+}
+
+.price {
+    font-family: 'Fraunces', serif;
+    color: #3d8168;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.price::after {
+    content: attr(data-discount);
+    position: absolute;
+    top: 0.7rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 19px;
+    font-size: 0.8125rem;
+    text-decoration: line-through;
+    color: #6c7289;
+}
+
+.button {
+    position: relative;
+    display: block;
+    background-color: #3d8168;
+    color: #fff;
+    text-align: center;
+    padding-block: 0.9375rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+}
+
+.icon {
+    position: absolute;
+    left: 82px;
+}
+
+@media screen and (width >=768px) {
+    .icon {
+        left: 40px;
+    }
 }
